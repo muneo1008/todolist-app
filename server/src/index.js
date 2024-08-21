@@ -20,7 +20,9 @@ db.connect(err => {
   console.log('Connected to the MySQL database.');
 });
 
-app.use(cors()); 
+app.use(cors({
+  origin:'*',
+})); 
 app.use(express.json()); 
 
 app.get('/', (req, res) => {
