@@ -8,7 +8,7 @@ const port = 5000;
 const db = mysql.createConnection({
   host: 'localhost', // 데이터베이스 호스트
   user: 'root', // MySQL 사용자
-  password: '?Muneo1008', // MySQL 비밀번호
+  password: '', // MySQL 비밀번호
   database: 'tododb' // 사용할 데이터베이스 이름
 });
 db.connect(err => {
