@@ -15,7 +15,7 @@ function App() {
   }, []);
 
   const fetchTodos = () => {
-    axios.get('http://localhost:5000/api/todo')
+    axios.get('https://muneo1008.github.io/todolist-app/api/todo')
       .then((response) => {
         setData(response.data);
       })
@@ -35,7 +35,7 @@ function App() {
       title: inputTitle,
     };
 
-    axios.post('http://localhost:5000/api/todo', newTodo)
+    axios.post('https://muneo1008.github.io/todolist-app/api/todo', newTodo)
       .then((response) => {
         setData([...data, response.data]);
         setInputTitle("");
@@ -47,7 +47,7 @@ function App() {
   };
   const handleDelete = (no) => {
     if(window.confirm("정말 삭제하시겠습니까?")){
-      axios.delete(`http://localhost:5000/api/todo/${no}`)
+      axios.delete(`https://muneo1008.github.io/todolist-app/api/todo/${no}`)
       .then((response) => {
         setData(data.filter(todo => todo.no !== no));
         // console.log('Delete Todo: ',response.data);
@@ -63,7 +63,7 @@ function App() {
     const updatedTodos = data.map(todo => {
       if (todo.no === no) {
         const updatedTodo = { ...todo, done: !todo.done };
-        axios.put(`http://localhost:5000/api/todo/${no}`, updatedTodo)
+        axios.put(`https://muneo1008.github.io/todolist-app/api/todo/${no}`, updatedTodo)
           .then((response) => {
             // console.log('Todo updated:', response.data);
           })
@@ -85,7 +85,7 @@ function App() {
       const editTodos = data.map(todo => {
         if (todo.no === no) {
           const editTodo = { ...todo, title:editTitle };
-          axios.put(`http://localhost:5000/api/todo/${no}`, editTodo)
+          axios.put(`https://muneo1008.github.io/todolist-app/api/todo/${no}`, editTodo)
             .then((response) => {
               // console.log('Todo edit:', response.data);
             })
