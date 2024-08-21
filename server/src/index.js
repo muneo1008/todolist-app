@@ -20,9 +20,7 @@ db.connect(err => {
   console.log('Connected to the MySQL database.');
 });
 
-app.use(cors({
-  origin: '*',  // 모든 도메인에서 접근 가능 (또는 특정 도메인만 허용 가능)
-}));
+app.use(cors());
 app.use(express.json()); 
 
 app.get('/', (req, res) => {
