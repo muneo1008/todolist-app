@@ -1,0 +1,16 @@
+{
+  "name": "my-fullstack-project",
+  "version": "1.0.0",
+  "scripts": {
+    "client": "npm start --prefix client",
+    "server": "nodemon server/src/index.js",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.1.4"
+  },
+  "dependencies": {
+    "mysql2": "^3.11.0"
+  }
+}

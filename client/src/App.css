@@ -1,0 +1,27 @@
+.App {
+  text-align: center;
+  background-color: #282c34;
+  text-decoration: none;
+}
+
+.App-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  min-height: 150px;
+}
+.inputTitle{
+  min-height: 50px;
+  padding: 20px;
+}
+.outputTitle{
+  padding: 20px;
+  min-height: calc(100vh - 200px);
+}
+.rounded-table {
+  border-radius: 10px;
+  overflow: hidden; /* 테두리가 둥글게 보이도록 콘텐츠가 넘어가는 것을 방지 */
+}
