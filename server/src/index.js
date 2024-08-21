@@ -7,10 +7,10 @@ const port = 5000;
 require('dotenv').config(); // .env 파일의 내용을 불러옴
 
 const db = mysql.createConnection({
-  host: process.env.DB_HOST,
-  user: process.env.DB_USER,
-  password: process.env.DB_PASS,
-  database: process.env.DB_NAME
+  host: "database-1.cvky20o8svml.ap-northeast-2.rds.amazonaws.com",
+  user: "root",
+  password: "?Muneo1008",
+  database: "tododb"
 });
 db.connect(err => {
   if (err) {
