@@ -4,12 +4,13 @@ const cors = require('cors');
 const mysql = require('mysql2');
 const app = express();
 const port = 5000;
+require('dotenv').config(); // .env 파일의 내용을 불러옴
 
 const db = mysql.createConnection({
-  host: 'localhost', // 데이터베이스 호스트
-  user: 'root', // MySQL 사용자
-  password: '', // MySQL 비밀번호
-  database: 'tododb' // 사용할 데이터베이스 이름
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASS,
+  database: process.env.DB_NAME
 });
 db.connect(err => {
   if (err) {
